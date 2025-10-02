@@ -12,16 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Hemuppgift_WPFtemplate
-{
-    /// <summary>
-    /// Interaction logic for StackPanelWindow.xaml
-    /// </summary>
-    public partial class StackPanelWindow : Window
-    {
-        public StackPanelWindow()
-        {
-            InitializeComponent();
-        }
+namespace Hemuppgift_WPFtemplate;
+
+/// <summary>
+/// Interaction logic for StackPanelWindow.xaml
+/// </summary>
+public partial class StackPanelWindow : Window {
+    public StackPanelWindow() {
+        InitializeComponent();
+    }
+
+    private void radHorizontal_Checked(object sender, RoutedEventArgs e) {
+        MyStackPanel.Orientation = Orientation.Horizontal;
+    }
+
+    private void radVertical_Checked(object sender, RoutedEventArgs e) {
+        MyStackPanel.Orientation = Orientation.Vertical;
     }
 }

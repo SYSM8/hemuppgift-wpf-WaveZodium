@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:Hemuppgift_WPFtemplate"
         mc:Ignorable="d"
         Title="StackPanelWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <RadioButton x:Name="radHorizontal" Content="Horizontal" Margin="0,0,10,0" Checked="radHorizontal_Checked" />
+            <RadioButton x:Name="radVertical" Content="Vertical" Checked="radVertical_Checked" />
+        </StackPanel>
+        <StackPanel x:Name="MyStackPanel" Orientation="Horizontal">
+            <Rectangle Fill="Red" Width="100" Height="100" Margin="2"/>
+            <Rectangle Fill="Orange" Width="90" Height="90" Margin="2"/>
+            <Rectangle Fill="Yellow" Width="80" Height="80" Margin="2"/>
+            <Rectangle Fill="LightGreen" Width="70" Height="70" Margin="2"/>
+            <Rectangle Fill="Green" Width="60" Height="60" Margin="2"/>
+            <Rectangle Fill="LightBlue" Width="50" Height="50" Margin="2"/>
+            <Rectangle Fill="Blue" Width="40" Height="40" Margin="2"/>
+            <Rectangle Fill="Black" Width="30" Height="30" Margin="2"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
