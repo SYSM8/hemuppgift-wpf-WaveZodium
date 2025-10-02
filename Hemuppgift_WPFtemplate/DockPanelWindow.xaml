@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:Hemuppgift_WPFtemplate"
         mc:Ignorable="d"
         Title="DockPanelWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Button x:Name="btnTop" Content="Top" DockPanel.Dock="Top" 
+                Height="30" Width="80"/>
+        <Button x:Name="btnRight" Content="Right" DockPanel.Dock="Right" 
+                Height="30" Width="80"/>
+        <Button x:Name="btnBottom" Content="Bottom" DockPanel.Dock="Bottom" 
+                Height="30" Width="80"/>
+        <Button x:Name="btnLeft" Content="Left" DockPanel.Dock="Left" 
+                Height="30" Width="80"/>
+        <Button x:Name="btnCenter" Content="Center"
+                Height="30" Width="80"/>
+    </DockPanel>
 </Window>
