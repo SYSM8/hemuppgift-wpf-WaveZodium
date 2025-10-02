@@ -12,16 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Hemuppgift_WPFtemplate
-{
+namespace Hemuppgift_WPFtemplate {
     /// <summary>
     /// Interaction logic for DockPanelWindow.xaml
     /// </summary>
-    public partial class DockPanelWindow : Window
-    {
-        public DockPanelWindow()
-        {
+    public partial class DockPanelWindow : Window {
+        public DockPanelWindow() {
             InitializeComponent();
+        }
+
+        private void btnCenter_Click(object sender, RoutedEventArgs e) {
+            Image image = new Image() { 
+                Source = new BitmapImage(new Uri("TrophyImage.jpg", UriKind.Relative)),
+                Stretch = Stretch.Uniform,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center,
+            };
+            image.MouseDown += (s, args) => {
+                // Remove the image from the DockPanel, and make the button visible again
+                myDockPanel.Children.Remove(image);
+                btnCenter.Visibility = Visibility.Visible;
+            };
+            myDockPanel.Children.Add(image);
+            
+            btnCenter.Visibility = Visibility.Collapsed;
         }
     }
 }

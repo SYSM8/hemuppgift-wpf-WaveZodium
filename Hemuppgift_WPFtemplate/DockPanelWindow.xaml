@@ -13,12 +13,12 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
     </Window.Resources>
-    <DockPanel>
+    <DockPanel x:Name="myDockPanel">
         <Button x:Name="btnTop" Content="Top" DockPanel.Dock="Top"/>
         <Button x:Name="btnBottom" Content="Bottom" DockPanel.Dock="Bottom"/>
         <Button x:Name="btnLeft" Content="Left" DockPanel.Dock="Left"/>
-        <Button x:Name="btnRight" Content="Right" DockPanel.Dock="Right"/>
-        <Button x:Name="btnCenter" Content="Center"
+        <Button x:Name="btnRight" Content="Right" DockPanel.Dock="Right" AllowDrop="True"/>
+        <Button x:Name="btnCenter" Content="Center" Click="btnCenter_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </DockPanel>
 </Window>
