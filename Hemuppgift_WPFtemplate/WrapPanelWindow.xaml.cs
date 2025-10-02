@@ -23,5 +23,15 @@ namespace Hemuppgift_WPFtemplate
         {
             InitializeComponent();
         }
+
+        private void radHorizontal_Checked(object sender, RoutedEventArgs e)
+        {
+            MyWrapPanel.Orientation = Orientation.Horizontal;
+        }
+
+        private void radVertical_Checked(object sender, RoutedEventArgs e)
+        {
+            MyWrapPanel.Orientation = Orientation.Vertical;
+        }
     }
 }
