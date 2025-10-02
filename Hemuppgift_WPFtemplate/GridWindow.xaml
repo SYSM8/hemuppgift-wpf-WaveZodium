@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+            <TextBlock Text="Row"/>
+            <TextBox x:Name="SelectedRow" Text="" Width="75"/>
+            <TextBlock Text="Column"/>
+            <TextBox x:Name="SelectedColumn" Text="" Width="75"/>
+            <Button x:Name="AddButton" Content="Apply" Click="AddButton_Click" Width="150"/>
+        </StackPanel>
+
+        <Grid x:Name="MyGrid" Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
     </Grid>
 </Window>

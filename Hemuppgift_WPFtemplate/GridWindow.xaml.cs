@@ -12,16 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Hemuppgift_WPFtemplate
-{
-    /// <summary>
-    /// Interaction logic for GridWindow.xaml
-    /// </summary>
-    public partial class GridWindow : Window
-    {
-        public GridWindow()
-        {
-            InitializeComponent();
-        }
+namespace Hemuppgift_WPFtemplate;
+
+/// <summary>
+/// Interaction logic for GridWindow.xaml
+/// </summary>
+public partial class GridWindow : Window {
+    public GridWindow() {
+        InitializeComponent();
+    }
+
+    private void AddButton_Click(object sender, RoutedEventArgs e) {
+        Button newButton = new Button {
+            Content = $"Row {SelectedRow.Text}, Column {SelectedColumn.Text}",
+            Background = Brushes.LightGreen
+        };
+
+        // Set grid position
+        Grid.SetRow(newButton, int.Parse(SelectedRow.Text));
+        Grid.SetColumn(newButton, int.Parse(SelectedColumn.Text));
+
+        // Add to grid (replace 'YourGridName' with the actual grid's name)
+        MyGrid.Children.Add(newButton);
     }
 }
